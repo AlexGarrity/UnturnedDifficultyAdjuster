@@ -5,6 +5,7 @@ using OpenMod.API.Eventing;
 using OpenMod.Core.Eventing;
 using OpenMod.Unturned.Zombies.Events;
 using SDG.Unturned;
+using UnturnedDifficultyAdjuster.Config;
 
 namespace UnturnedDifficultyAdjuster.Events
 {

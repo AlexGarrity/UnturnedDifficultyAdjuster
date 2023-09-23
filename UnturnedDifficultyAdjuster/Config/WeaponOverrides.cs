@@ -1,6 +1,6 @@
 ﻿using SDG.Unturned;
 
-namespace UnturnedDifficultyAdjuster
+namespace UnturnedDifficultyAdjuster.Config
 {
     public abstract class WeaponOverride
     {

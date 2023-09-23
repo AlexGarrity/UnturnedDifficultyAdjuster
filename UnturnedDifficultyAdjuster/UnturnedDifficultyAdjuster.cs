@@ -6,10 +6,9 @@ using Microsoft.Extensions.Logging;
 using OpenMod.API.Eventing;
 using OpenMod.API.Plugins;
 using OpenMod.Unturned.Plugins;
+using UnturnedDifficultyAdjuster.Config;
 
-// For more, visit https://openmod.github.io/openmod-docs/devdoc/guides/getting-started.html
-
-[assembly: PluginMetadata("UnturnedDifficultyAdjuster", DisplayName = "Unturned Difficulty Adjuster")]
+[assembly: PluginMetadata("UnturnedDifficultyAdjuster", DisplayName = "Unturned Difficulty Adjuster", Author = "Alex Garrity")]
 
 namespace UnturnedDifficultyAdjuster
 {

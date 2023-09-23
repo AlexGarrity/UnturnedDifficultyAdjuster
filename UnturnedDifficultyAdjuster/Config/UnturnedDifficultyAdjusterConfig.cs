@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace UnturnedDifficultyAdjuster
+namespace UnturnedDifficultyAdjuster.Config
 {
     public static class UnturnedDifficultyAdjusterConfig
     {

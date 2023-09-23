@@ -1,4 +1,4 @@
-﻿namespace UnturnedDifficultyAdjuster
+﻿namespace UnturnedDifficultyAdjuster.Config
 {
     public class LimbDamageOverrides
     {
