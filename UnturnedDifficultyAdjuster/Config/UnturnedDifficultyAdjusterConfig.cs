@@ -16,7 +16,7 @@ namespace UnturnedDifficultyAdjuster.Config
         public static void ParseConfig(IConfiguration configuration, ILogger logger)
         {
             logger.LogDebug("Parsing config");
-            
+
             var meleeSection = configuration.GetSection("weapons:global:melee");
             MeleeWeaponOverride = new GeneralWeaponOverride
             {
@@ -46,6 +46,7 @@ namespace UnturnedDifficultyAdjuster.Config
                         $"Couldn't create a config for override with key '{overrideSection.Key}'. This should be a number representing the item ID.");
                     continue;
                 }
+
                 var weaponOverride = new SpecificWeaponOverride
                 {
                     CanStun = overrideSection.GetSection("can_stun").Get<bool>(),

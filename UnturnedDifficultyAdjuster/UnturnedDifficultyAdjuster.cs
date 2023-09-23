@@ -8,7 +8,8 @@ using OpenMod.API.Plugins;
 using OpenMod.Unturned.Plugins;
 using UnturnedDifficultyAdjuster.Config;
 
-[assembly: PluginMetadata("UnturnedDifficultyAdjuster", DisplayName = "Unturned Difficulty Adjuster", Author = "Alex Garrity")]
+[assembly:
+    PluginMetadata("UnturnedDifficultyAdjuster", DisplayName = "Unturned Difficulty Adjuster", Author = "Alex Garrity")]
 
 namespace UnturnedDifficultyAdjuster
 {

@@ -34,77 +34,77 @@ weapons:
       crit_damage: 5
       crit_chance: 0.1
       stun_on_crit: true
-      
+    
     16: # Camp Axe
       can_stun: false
       damage: 25
       crit_damage: 45
       crit_chance: 0.05
       stun_on_crit: false
-      
+    
     76: # Blowtorch
       can_stun: false
       damage: 3
       crit_damage: 5
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     104: # Fire Axe
       can_stun: false
       damage: 35
       crit_damage: 70
       crit_chance: 0.1
       stun_on_crit: false
-      
+    
     105: # Baseball Bat
       can_stun: true
       damage: 18
       crit_damage: 18
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     106: # Hockey Stick
       can_stun: true
       damage: 13
       crit_damage: 13
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     120: # Kitchen Knife
       can_stun: false
       damage: 10
       crit_damage: 10
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     121: # Military Knife
       can_stun: false
       damage: 15
       crit_damage: 15
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     135: # Golf Club
       can_stun: true
       damage: 20
       crit_damage: 20
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     136: # Sledgehammer
       can_stun: true
       damage: 50
       crit_damage: 50
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     137: # Butcher Knife
       can_stun: true
       damage: 12
       crit_damage: 12
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     138: # Hammer
       can_stun: true
       damage: 10
@@ -118,21 +118,21 @@ weapons:
       crit_damage: 15
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     140: # Butterfly Knife
       can_stun: true
       damage: 10
       crit_damage: 40
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     141: # Saw
       can_stun: false
       damage: 20
       crit_damage: 25
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     142: # Rake
       can_stun: true
       damage: 12
@@ -146,7 +146,7 @@ weapons:
       crit_damage: 10
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     487: # Makeshift Bat
       can_stun: true
       damage: 22
@@ -160,91 +160,91 @@ weapons:
       crit_damage: 25
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     1023: # Baton
       can_stun: true
       damage: 10
       crit_damage: 15
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     1030: # Frying Pan
       can_stun: true
       damage: 15
       crit_damage: 15
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     1031: # Shovel
       can_stun: true
       damage: 15
       crit_damage: 15
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     1032: # Crowbar
       can_stun: false
       damage: 15
       crit_damage: 25
       crit_chance: 0.1
       stun_on_crit: false
-      
+    
     1033: # Paddle
       can_stun: true
       damage: 15
       crit_damage: 15
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     1034: # Pitchfork
       can_stun: false
       damage: 15
       crit_damage: 15
       crit_chance: 0.05
       stun_on_crit: false
-      
+    
     1035: # Machete
       can_stun: true
       damage: 30
       crit_damage: 50
       crit_chance: 0.2
       stun_on_crit: false
-      
+    
     1036: # Katana
       can_stun: false
       damage: 30
       crit_damage: 60
       crit_chance: 0.3
       stun_on_crit: false
-      
+    
     1174: # Sycthe
       can_stun: false
       damage: 35
       crit_damage: 60
       crit_chance: 0.2
       stun_on_crit: false
-      
+    
     1198: # Pickaxe
       can_stun: false
       damage: 20
       crit_damage: 80
       crit_chance: 0.1
       stun_on_crit: false
-      
+    
     1390: # Pool Cue
       can_stun: true
       damage: 10
       crit_damage: 15
       crit_chance: 0.0
       stun_on_crit: false
-      
+    
     1475: # Jackhammer
       can_stun: false
       damage: 20
       crit_damage: 30
       crit_chance: 0.1
       stun_on_crit: false
-      
+    
     1503: # Zweihander
       can_stun: false
       damage: 60
