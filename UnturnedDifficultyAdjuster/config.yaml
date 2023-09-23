@@ -1,2 +1,35 @@
-# See https://openmod.github.io/openmod-docs/devdoc/concepts/configuration.html
-# You can delete this file if you do not need a configuration
+weapons:
+  global:
+    # Global overrides apply to any weapon that doesn't have a specific override below
+    melee:
+      can_stun: true            # Should a melee weapon stun if you get a headshot? (vanilla stun mechanic toggle)
+      damage_modifier: 1.0      # Scale the amount of damage a melee weapon can do
+      crit_chance: 0.1          # The chance that a melee weapon will do full damage (ie. the modifier is not applied)
+      stun_on_crit: false       # Should a critical hit stun?
+    
+    ranged:
+      can_stun: false           # Should a ranged weapon stun if you get a headshot? (vanilla stun mechanic toggle)
+      damage_modifier: 1.0      # Scale the amount of damage a ranged weapon can do
+      crit_chance: 0.1          # The chance that a melee weapon will do full damage (ie. the modifier is not applied)
+      stun_on_crit: false       # Should a critical hit stun?
+    
+    limb_damage_modifiers:
+      # The limb damage modifiers are used in place of the vanilla limb damage system
+      # Note that due to floating point error and rounding, the values may be a point or two off in places
+      head: 1.1
+      body: 1.0
+      spine: 0.6
+      arms: 0.3
+      legs: 0.3
+  
+  overrides:
+    # For our overrides, we mainly deal with melee weapons. The logic applied is that they fall under two categories - bladed and blunt.
+    # Blunt weapons should be able to stun a zombie with a headshot but shouldn't do much damage, where bladed do lots of damage but won't stun
+    # Think of it like concussing a zombie vs slicing their arm off. Certain weapons, such as the chainsaw, are an exception as there should 
+    # be *some* melee weapons that are viable
+    0: # Fists
+      can_stun: false
+      damage: 5
+      crit_damage: 10
+      crit_chance: 0.0
+      stun_on_crit: false

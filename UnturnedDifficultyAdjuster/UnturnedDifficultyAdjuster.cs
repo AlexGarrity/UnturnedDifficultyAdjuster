@@ -1,46 +1,50 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
-using Cysharp.Threading.Tasks;
-using OpenMod.Unturned.Plugins;
+using OpenMod.API.Eventing;
 using OpenMod.API.Plugins;
+using OpenMod.Unturned.Plugins;
 
 // For more, visit https://openmod.github.io/openmod-docs/devdoc/guides/getting-started.html
 
-[assembly: PluginMetadata("MyOpenModPlugin", DisplayName = "My OpenMod Plugin")]
+[assembly: PluginMetadata("UnturnedDifficultyAdjuster", DisplayName = "Unturned Difficulty Adjuster")]
 
-namespace MyOpenModPlugin
+namespace UnturnedDifficultyAdjuster
 {
-    public class MyOpenModPlugin : OpenModUnturnedPlugin
+    public class UnturnedDifficultyAdjuster : OpenModUnturnedPlugin
     {
         private readonly IConfiguration m_Configuration;
+        private readonly IEventBus m_eventBus;
+        private readonly ILogger<UnturnedDifficultyAdjuster> m_logger;
         private readonly IStringLocalizer m_StringLocalizer;
-        private readonly ILogger<MyOpenModPlugin> m_Logger;
 
-        public MyOpenModPlugin(
+        public UnturnedDifficultyAdjuster(
             IConfiguration configuration,
             IStringLocalizer stringLocalizer,
-            ILogger<MyOpenModPlugin> logger,
+            ILogger<UnturnedDifficultyAdjuster> mLogger,
             IServiceProvider serviceProvider) : base(serviceProvider)
         {
             m_Configuration = configuration;
             m_StringLocalizer = stringLocalizer;
-            m_Logger = logger;
+            m_logger = mLogger;
         }
 
         protected override async UniTask OnLoadAsync()
         {
             // await UniTask.SwitchToMainThread(); uncomment if you have to access Unturned or UnityEngine APIs
-            m_Logger.LogInformation("Hello World!");
+            m_logger.LogInformation(m_StringLocalizer["plugin_events:plugin_start"]);
 
             // await UniTask.SwitchToThreadPool(); // you can switch back to a different thread
+
+            UnturnedDifficultyAdjusterConfig.ParseConfig(m_Configuration, m_logger);
         }
 
         protected override async UniTask OnUnloadAsync()
         {
             // await UniTask.SwitchToMainThread(); uncomment if you have to access Unturned or UnityEngine APIs
-            m_Logger.LogInformation(m_StringLocalizer["plugin_events:plugin_stop"]);
+            m_logger.LogInformation(m_StringLocalizer["plugin_events:plugin_stop"]);
         }
     }
 }

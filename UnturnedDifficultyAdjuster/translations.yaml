@@ -2,5 +2,5 @@
 # You can delete this file if you do not need translations
 
 plugin_events:
-  plugin_start: "Hello World"
-  plugin_stop: "Good bye :("
+  plugin_start: "Unturned Difficulty Adjuster is enabled"
+  plugin_stop: "Thanks for using Unturned Difficulty Adjuster"
