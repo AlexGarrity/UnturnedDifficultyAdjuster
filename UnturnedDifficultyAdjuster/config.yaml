@@ -1,19 +1,226 @@
+infection:
+  illness:
+    zombie:
+      chance of infection: 0.5      # The chance that a hit from a zombie will cause infection
+      grace period: 120.0           # How long a player has to take infection-curing medication before it's too late
+      spawn zombie on death: true   # Should a player that dies of infection spawn a zombie on death?
+    
+    bacterial:
+      enabled: true                 # Should players be able to get bacterial infections
+      max health: -40               # What should it reduce their max health by
+      max stamina: -20              # What should it reduce their max stamina by
+      cure time: 1200               # How long should it take to cure itself (in seconds)
+    
+    viral:
+      enabled: true                 # Should players be able to get bacterial infections
+      max health: -40               # What should it reduce their max health by
+      max stamina: -20              # What should it reduce their max stamina by
+      cure time: 1200               # How long should it take to cure itself (in seconds)
+  
+  medication:
+    15: # Medkit
+      health: 100
+      damage reduction: 0.1
+      cures bacterial: true
+      cures zombie: true
+      cures viral: true
+      cures open wound: true
+      cures legs: false
+    
+    75: # Chemicals
+      health: -90
+      damage reduction: 0.0
+      cures bacterial: true
+      cures zombie: true
+      cures viral: true
+      cures open wound: false
+      cures legs: false
+    
+    95: # Bandage
+      health: 20
+      damage reduction: 0.0
+      cures bacterial: false
+      cures zombie: false
+      cures viral: false
+      cures open wound: true
+      cures legs: false
+    
+    96: # Splint
+      health: 0
+      damage reduction: 0.0
+      cures bacterial: false
+      cures zombie: false
+      cures viral: false
+      cures open wound: false
+      cures legs: true
+    
+    269: # Vaccine
+      health: 50
+      damage reduction: 0.0
+      cures bacterial: true
+      cures zombie: true
+      cures viral: true
+      cures open wound: false
+      cures legs: false
+    
+    389: # Antibiotics
+      health: 10
+      damage reduction: 0.0
+      cures bacterial: true
+      cures zombie: false
+      cures viral: true
+      cures open wound: false
+      cures legs: false
+    
+    387: # Adrenaline
+      health: 0
+      damage reduction: 0.3
+      cures bacterial: false
+      cures zombie: false
+      cures viral: false
+      cures open wound: false
+      cures legs: false
+    
+    388: # Morphine
+      health: 0
+      damage reduction: 0.4
+      cures bacterial: false
+      cures zombie: false
+      cures viral: false
+      cures open wound: false
+      cures legs: false
+    
+    390: # Painkillers
+      health: 0
+      damage reduction: 0.2
+      cures bacterial: false
+      cures zombie: false
+      cures viral: false
+      cures open wound: false
+      cures legs: false
+    
+    391: # Vitamins
+      health: 20
+      damage reduction: 0.0
+      cures bacterial: false
+      cures zombie: false
+      cures viral: false
+      cures open wound: false
+      cures legs: false
+    
+    392: # Purification Tablets
+      health: -30
+      damage reduction: 0.0
+      cures bacterial: true
+      cures zombie: true
+      cures viral: true
+      cures open wound: false
+      cures legs: false
+
+    393: # Rag
+      health: 5
+      damage reduction: 0.0
+      cures bacterial: false
+      cures zombie: false
+      cures viral: false
+      cures open wound: true
+      cures legs: false
+    
+    394: # Dressing
+      health: 35
+      damage reduction: 0.0
+      cures bacterial: false
+      cures zombie: false
+      cures viral: false
+      cures open wound: true
+      cures legs: false
+    
+    395: # Blood Bag
+      health: 70
+      damage reduction: 0.0
+      cures bacterial: false
+      cures zombie: false
+      cures viral: false
+      cures open wound: false
+      cures legs: false
+    
+    403: # Suture Kit
+      health: 50
+      damage reduction: 0.0
+      cures bacterial: false
+      cures zombie: true
+      cures viral: true
+      cures open wound: true
+      cures legs: false
+    
+    404: # Cough Syrup
+      health: 5
+      damage reduction: 0.0
+      cures bacterial: false
+      cures zombie: true
+      cures viral: true
+      cures open wound: false
+      cures legs: false
+  
+  consumables:
+    393: # Rag
+      bacterial chance: 0.2
+      viral chance: 0.0
+    
+    504: # Raw Trout
+      bacterial chance: 0.0
+      viral chance: 0.3
+    
+    505: # Raw Salmon
+      bacterial chance: 0.0
+      viral chance: 0.6
+    
+    514: # Raw Venison
+      bacterial chance: 0.2
+      viral chance: 0.0
+    
+    1117: # Raw Pork
+      bacterial chance: 0.4
+      viral chance: 0.0
+    
+    1120: # Raw Beef
+      bacterial chance: 0.1
+      viral chance: 0.0
+    
+    1347: # Raw Minnow
+      bacterial chance: 0.0
+      viral chance: 0.3
+    
+    1349: # Raw Goldfish
+      bacterial chance: 0.0
+      viral chance: 0.3
+    
+    1351: # Raw Bass
+      bacterial chance: 0.0
+      viral chance: 0.6
+    
+    1434: # Raw Squid
+      bacterial chance: 0.0
+      viral chance: 0.2
+
+
+
 weapons:
   global:
     # Global overrides apply to any weapon that doesn't have a specific override below
     melee:
-      can_stun: true            # Should a melee weapon stun if you get a headshot? (vanilla stun mechanic toggle)
-      damage_modifier: 1.0      # Scale the amount of damage a melee weapon can do
-      crit_chance: 0.1          # The chance that a melee weapon will do full damage (ie. the modifier is not applied)
-      stun_on_crit: false       # Should a critical hit stun?
+      can stun: true            # Should a melee weapon stun if you get a headshot? (vanilla stun mechanic toggle)
+      damage modifier: 1.0      # Scale the amount of damage a melee weapon can do
+      crit chance: 0.1          # The chance that a melee weapon will do full damage (ie. the modifier is not applied)
+      stun on crit: false       # Should a critical hit stun?
     
     ranged:
-      can_stun: false           # Should a ranged weapon stun if you get a headshot? (vanilla stun mechanic toggle)
-      damage_modifier: 1.0      # Scale the amount of damage a ranged weapon can do
-      crit_chance: 0.1          # The chance that a melee weapon will do full damage (ie. the modifier is not applied)
-      stun_on_crit: false       # Should a critical hit stun?
+      can stun: false           # Should a ranged weapon stun if you get a headshot? (vanilla stun mechanic toggle)
+      damage modifier: 1.0      # Scale the amount of damage a ranged weapon can do
+      crit chance: 0.1          # The chance that a melee weapon will do full damage (ie. the modifier is not applied)
+      stun on crit: false       # Should a critical hit stun?
     
-    limb_damage_modifiers:
+    limb damage modifiers:
       # The limb damage modifiers are used in place of the vanilla limb damage system
       # Note that due to floating point error and rounding, the values may be a point or two off in places
       head: 1.1
@@ -29,225 +236,225 @@ weapons:
     # somewhat blunt but also have sharp parts which could embed themselves
     
     0: # Fists
-      can_stun: false
+      can stun: false
       damage: 2
-      crit_damage: 5
-      crit_chance: 0.1
-      stun_on_crit: true
+      crit damage: 5
+      crit chance: 0.1
+      stun on crit: true
     
     16: # Camp Axe
-      can_stun: false
+      can stun: false
       damage: 25
-      crit_damage: 45
-      crit_chance: 0.05
-      stun_on_crit: false
+      crit damage: 45
+      crit chance: 0.05
+      stun on crit: false
     
     76: # Blowtorch
-      can_stun: false
+      can stun: false
       damage: 3
-      crit_damage: 5
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 5
+      crit chance: 0.0
+      stun on crit: false
     
     104: # Fire Axe
-      can_stun: false
+      can stun: false
       damage: 35
-      crit_damage: 70
-      crit_chance: 0.1
-      stun_on_crit: false
+      crit damage: 70
+      crit chance: 0.1
+      stun on crit: false
     
     105: # Baseball Bat
-      can_stun: true
+      can stun: true
       damage: 18
-      crit_damage: 18
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 18
+      crit chance: 0.0
+      stun on crit: false
     
     106: # Hockey Stick
-      can_stun: true
+      can stun: true
       damage: 13
-      crit_damage: 13
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 13
+      crit chance: 0.0
+      stun on crit: false
     
     120: # Kitchen Knife
-      can_stun: false
+      can stun: false
       damage: 10
-      crit_damage: 10
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 10
+      crit chance: 0.0
+      stun on crit: false
     
     121: # Military Knife
-      can_stun: false
+      can stun: false
       damage: 15
-      crit_damage: 15
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 15
+      crit chance: 0.0
+      stun on crit: false
     
     135: # Golf Club
-      can_stun: true
+      can stun: true
       damage: 20
-      crit_damage: 20
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 20
+      crit chance: 0.0
+      stun on crit: false
     
     136: # Sledgehammer
-      can_stun: true
+      can stun: true
       damage: 50
-      crit_damage: 50
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 50
+      crit chance: 0.0
+      stun on crit: false
     
     137: # Butcher Knife
-      can_stun: true
+      can stun: true
       damage: 12
-      crit_damage: 12
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 12
+      crit chance: 0.0
+      stun on crit: false
     
     138: # Hammer
-      can_stun: true
+      can stun: true
       damage: 10
-      crit_damage: 25
-      crit_chance: 0.1
-      stun_on_crit: false
+      crit damage: 25
+      crit chance: 0.1
+      stun on crit: false
     
     139: # Pocket Knife
-      can_stun: true
+      can stun: true
       damage: 10
-      crit_damage: 15
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 15
+      crit chance: 0.0
+      stun on crit: false
     
     140: # Butterfly Knife
-      can_stun: true
+      can stun: true
       damage: 10
-      crit_damage: 40
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 40
+      crit chance: 0.0
+      stun on crit: false
     
     141: # Saw
-      can_stun: false
+      can stun: false
       damage: 20
-      crit_damage: 25
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 25
+      crit chance: 0.0
+      stun on crit: false
     
     142: # Rake
-      can_stun: true
+      can stun: true
       damage: 12
-      crit_damage: 15
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 15
+      crit chance: 0.0
+      stun on crit: false
     
     276: # Flash Light
-      can_stun: false
+      can stun: false
       damage: 5
-      crit_damage: 10
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 10
+      crit chance: 0.0
+      stun on crit: false
     
     487: # Makeshift Bat
-      can_stun: true
+      can stun: true
       damage: 22
-      crit_damage: 40
-      crit_chance: 0.2
-      stun_on_crit: false
+      crit damage: 40
+      crit chance: 0.2
+      stun on crit: false
     
     490: # Chainsaw
-      can_stun: false
+      can stun: false
       damage: 25
-      crit_damage: 25
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 25
+      crit chance: 0.0
+      stun on crit: false
     
     1023: # Baton
-      can_stun: true
+      can stun: true
       damage: 10
-      crit_damage: 15
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 15
+      crit chance: 0.0
+      stun on crit: false
     
     1030: # Frying Pan
-      can_stun: true
+      can stun: true
       damage: 15
-      crit_damage: 15
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 15
+      crit chance: 0.0
+      stun on crit: false
     
     1031: # Shovel
-      can_stun: true
+      can stun: true
       damage: 15
-      crit_damage: 15
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 15
+      crit chance: 0.0
+      stun on crit: false
     
     1032: # Crowbar
-      can_stun: false
+      can stun: false
       damage: 15
-      crit_damage: 25
-      crit_chance: 0.1
-      stun_on_crit: false
+      crit damage: 25
+      crit chance: 0.1
+      stun on crit: false
     
     1033: # Paddle
-      can_stun: true
+      can stun: true
       damage: 15
-      crit_damage: 15
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 15
+      crit chance: 0.0
+      stun on crit: false
     
     1034: # Pitchfork
-      can_stun: false
+      can stun: false
       damage: 15
-      crit_damage: 15
-      crit_chance: 0.05
-      stun_on_crit: false
+      crit damage: 15
+      crit chance: 0.05
+      stun on crit: false
     
     1035: # Machete
-      can_stun: true
+      can stun: true
       damage: 30
-      crit_damage: 50
-      crit_chance: 0.2
-      stun_on_crit: false
+      crit damage: 50
+      crit chance: 0.2
+      stun on crit: false
     
     1036: # Katana
-      can_stun: false
+      can stun: false
       damage: 30
-      crit_damage: 60
-      crit_chance: 0.3
-      stun_on_crit: false
+      crit damage: 60
+      crit chance: 0.3
+      stun on crit: false
     
     1174: # Sycthe
-      can_stun: false
+      can stun: false
       damage: 35
-      crit_damage: 60
-      crit_chance: 0.2
-      stun_on_crit: false
+      crit damage: 60
+      crit chance: 0.2
+      stun on crit: false
     
     1198: # Pickaxe
-      can_stun: false
+      can stun: false
       damage: 20
-      crit_damage: 80
-      crit_chance: 0.1
-      stun_on_crit: false
+      crit damage: 80
+      crit chance: 0.1
+      stun on crit: false
     
     1390: # Pool Cue
-      can_stun: true
+      can stun: true
       damage: 10
-      crit_damage: 15
-      crit_chance: 0.0
-      stun_on_crit: false
+      crit damage: 15
+      crit chance: 0.0
+      stun on crit: false
     
     1475: # Jackhammer
-      can_stun: false
+      can stun: false
       damage: 20
-      crit_damage: 30
-      crit_chance: 0.1
-      stun_on_crit: false
+      crit damage: 30
+      crit chance: 0.1
+      stun on crit: false
     
     1503: # Zweihander
-      can_stun: false
+      can stun: false
       damage: 60
-      crit_damage: 100
-      crit_chance: 0.1
-      stun_on_crit: false
+      crit damage: 100
+      crit chance: 0.1
+      stun on crit: false
